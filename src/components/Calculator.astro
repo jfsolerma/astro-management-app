@@ -1,0 +1,40 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	img: string;
+	descImg: string;
+	items: string;
+}
+
+const { title, body, img, descImg, items} = Astro.props;
+---
+<input type="radio" id="mostrar-modal" name="modal"/>
+<label for="mostrar-modal">Detalles</label>
+<input type="radio" id="cerrar-modal" name="modal"/>
+<label for="cerrar-modal">X</label>
+<section id="modal">
+  <header class="cabeceraCalculadora">
+    <article class="imgDesc"> 
+      <img src={img} alt={descImg} />
+    </article>
+    <article class="description">
+      <h1>{title}</h1>
+      <p>Cantidad disponible: 
+        <input type="number" id="items" value={items} readonly name="txt" /></p>
+    </article>
+    
+  </header>
+  <article class="containerCalculator">
+    <span class="num" onclick="console.log(this)"><i>+1</i></span>
+    <span class="num" onclick="value+='-1'"><i>-1</i></span>
+    <span class="num" onclick="value+='5'"><i>+5</i></span>
+    <span class="num" onclick="value+='-5'"><i>-5</i></span>
+  </article>
+
+</section>
+
+
+<style>
+
+</style>

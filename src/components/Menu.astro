@@ -1,0 +1,75 @@
+<menu>
+  <li><button><img src="/img/user.svg" /><span>Usuario</span></button></li>
+  <li>
+    <button><img src="/img/calculator.svg" /><span>Calculadora</span></button>
+  </li>
+  <li>
+    <button><img src="/img/plus.svg" /><span>Nuevo producto</span></button>
+  </li>
+  <li style="float: left;"><button><img src="/img/contrast.svg" /></button></li>
+</menu>
+
+<style>
+  @media only screen and (max-width: 700px) {
+    menu li button span {
+      display: none;
+    }
+    menu {
+      position: fixed;
+      height: 100%;
+      display: block;
+      background-color: #5c0000;
+      top: 0px;
+      min-height: 100%;
+      margin-top: 0;
+      right: 0;
+    }
+    menu li {
+      width: 100%;
+    }
+  }
+  @media only screen and (min-width: 700px) {
+    menu {
+      position: sticky;
+      height: 45px;
+      background-color: #5c0000;
+      display: flex;
+      justify-content: flex-end;
+      top: 0px; 
+    }
+    menu li {
+      height: 100%;
+    }
+    menu li button {
+    }
+  }
+  menu {
+    padding-inline-start: 0;
+    
+    box-shadow: inset -8px 0 8px rgb(0 0 0 / 15%),
+        inset 0 -8px 8px rgb(0 0 0 / 25%), 0 0 0 2px rgb(0 0 0 / 75%),
+        5px 10px 15px rgb(0 0 0 / 40%);
+  }
+  menu li button {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    text-align: left;
+    display: flex;
+    color: white;
+  }
+
+  menu li button:active {
+    transform: translateY(1px);
+  }
+
+  menu li {
+    display: flex;
+    
+  }
+  menu li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 2px;
+  }
+</style>
